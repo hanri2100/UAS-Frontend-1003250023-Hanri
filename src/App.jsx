@@ -53,7 +53,7 @@ function App() {
       </header>
 
       {/* Indikator Loading */}
-      {loading && <div className="loading">Sedang memuat data film...</div>}
+      {loading && <div className="loading">Loading...</div>}
 
       {/* Grid Daftar Film */}
       {!loading && (
