@@ -1,7 +1,7 @@
 # UAS Pemrograman Frontend - CinemaKampus
 
-**Nama:** Hanrinov Kaempe
-**NIM:** 1003250023
+**Nama:** Hanrinov Kaempe<br>
+**NIM:** 1003250023<br>
 **Kelas:** Eksekutif - Informatika
 
 ## Link Live Demo
