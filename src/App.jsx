@@ -1,48 +1,98 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-
+// --- DATA PALSU (HARDCODED) - TAHAP 3 HARUS HAPUS INI ---
+const dummyMovies = [
+  {
+    id: 1,
+    title: "Spiderman: No Way Home",
+    year: 2021,
+    poster: "https://placehold.co/300x450?text=Spiderman",
+  },
+  {
+    id: 2,
+    title: "The Batman",
+    year: 2022,
+    poster: "https://placehold.co/300x450?text=The+Batman",
+  },
+  {
+    id: 3,
+    title: "Avengers: Endgame",
+    year: 2019,
+    poster: "https://placehold.co/300x450?text=Avengers",
+  },
+  {
+    id: 4,
+    title: "Joker",
+    year: 2019,
+    poster: "https://placehold.co/300x450?text=Joker",
+  },
+  {
+    id: 5,
+    title: "Iron Man",
+    year: 2008,
+    poster: "https://placehold.co/300x450?text=Iron+Man",
+  },
+  {
+    id: 6,
+    title: "Doctor Strange",
+    year: 2016,
+    poster: "https://placehold.co/300x450?text=Dr+Strange",
+  },
+  {
+    id: 7,
+    title: "Wonder Woman",
+    year: 2017,
+    poster: "https://placehold.co/300x450?text=Wonder+Woman",
+  },
+  {
+    id: 8,
+    title: "Black Panther",
+    year: 2018,
+    poster: "https://placehold.co/300x450?text=Black+Panther",
+  },
+];
 function App() {
-  // 1. State Penampung Data Film dari API (Tahap 3)
-  const [movies, setMovies] = useState([]);
-  
-  // 2. State Indikator Loading (Tahap 3)
-  const [loading, setLoading] = useState(true);
-  
-  // 3. State Kata Kunci Pencarian (Tahap 2)
+  const [movies, setMovies] = useState(dummyMovies);
+  const [loading, setLoading] = useState(false);
+  // TODO: TAHAP 2 - Buat state untuk search input di sini
   const [searchTerm, setSearchTerm] = useState("");
 
-  // TAHAP 3: Integrasi API Menggunakan useEffect
+  // TODO: TAHAP 3 - Hapus dummyData dan ambil dari API
   useEffect(() => {
-    async function fetchMovies() {
-      try {
-        setLoading(true);
-        const response = await fetch("https://api.sampleapis.com/movies/classic");
-        const data = await response.json();
+    setLoading(true);
+
+    fetch("https://api.sampleapis.com/movies/classic")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Gagal mengambil data film");
+        }
+        return response.json();
+      })
+      .then((data) => {
         setMovies(data);
-      } catch (error) {
-        console.error("Gagal mengambil data film:", error);
-      } finally {
+      })
+      .catch((error) => {
+        throw new Error("Gagal mengambil data: " + error.message);
+      })
+      .finally(() => {
         setLoading(false);
-      }
-    }
+      });
+  }, []);
 
-    fetchMovies();
-  }, []); // [] memastikan fetch hanya dieksekusi 1 kali saat inisialisasi
-
-  // TAHAP 2: Handler Perubahan Input Pencarian
   const handleSearch = (e) => {
+    // TODO: TAHAP 2 - Lengkapi logika filter pencarian di sini
+    // Saat diketik, list 'movies' harus berubah sesuai kata kunci
     setSearchTerm(e.target.value);
   };
 
-  // TAHAP 2: Logika Filter Pencarian (Case-Insensitive)
   const filteredMovies = movies.filter((movie) =>
-    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   return (
     <div className="app-container">
       <header>
-        <h1>🎬 CinemaKampus</h1>
+        <h1> 🎬 CinemaKampus</h1>
         <input
           type="text"
           placeholder="Cari film kesukaanmu..."
@@ -51,38 +101,30 @@ function App() {
           onChange={handleSearch}
         />
       </header>
-
-      {/* Indikator Loading */}
-      {loading && <div className="loading">Loading...</div>}
-
-      {/* Grid Daftar Film */}
-      {!loading && (
-        <div className="movie-grid">
-          {filteredMovies.length > 0 ? (
-            filteredMovies.map((movie) => (
-              <div key={movie.id} className="movie-card">
-                <img
-                  src={movie.posterURL || "https://placehold.co/300x450?text=No+Poster"}
-                  alt={movie.title}
-                  onError={(e) => {
-                    e.target.src = "https://placehold.co/300x450?text=No+Image";
-                  }}
-                />
-                <div className="movie-info">
-                  <h3>{movie.title}</h3>
-                  <p>Tahun: {movie.year || "-"}</p>
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="no-data">
-              Film "{searchTerm}" tidak ditemukan.
+      {loading && <div className="loading">Sedang memuat data...</div>}
+      <div className="movie-grid">
+        {filteredMovies.map((movie) => (
+          <div key={movie.id} className="movie-card">
+            <img
+              src={
+                movie.posterURL ||
+                "https://placehold.co/300x450?text=Poster+Tidak+Tersedia"
+              }
+              alt={movie.title}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src =
+                  "https://placehold.co/300x450?text=Poster+Tidak+Tersedia";
+              }}
+            />
+            <div className="movie-info">
+              <h3>{movie.title}</h3>
+              <p>{movie.year || "Tahun tidak tersedia"}</p>
             </div>
-          )}
-        </div>
-      )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
-
 export default App;
