@@ -7,7 +7,7 @@
 ## Link Live Demo
 
 Klik link di bawah ini untuk melihat hasil pekerjaan saya:
-**[Tempel Link Vercel/Netlify Anda Disini]**
+**[text](https://uas-frontend-1003250023-hanri.vercel.app/)**
 
 ---
 
