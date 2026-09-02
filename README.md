@@ -13,8 +13,6 @@ Klik link di bawah ini untuk melihat hasil pekerjaan saya:
 
 ## Checklist Pengerjaan (Self-Assessment)
 
-_Silakan centang [x] jika Anda sudah mengerjakan tahap tersebut._
-
 ### TAHAP 1: Layout & Responsivitas (30 Poin)
 
 - [x] Layout menggunakan CSS Grid / Flexbox (Bukan Float).
@@ -37,8 +35,7 @@ _Silakan centang [x] jika Anda sudah mengerjakan tahap tersebut._
 
 ## Screenshot Bukti
 
-_(Upload screenshot hasil tampilan Mobile dan Desktop disini)_
 **1. Tampilan Mobile (Responsive)**
-![Mobile](./screenshoots/Mobile.png)
+<img src="/screenshoots/Mobile.png" width="500">
 **2. Hasil Pencarian**
-![Search](./screenshoots/Search.png)
+<img src="/screenshoots/Search.png" width="500">
