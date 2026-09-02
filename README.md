@@ -15,21 +15,21 @@ Klik link di bawah ini untuk melihat hasil pekerjaan saya:<br>
 
 ### TAHAP 1: Layout & Responsivitas (30 Poin)
 
-- [x] Layout menggunakan CSS Grid / Flexbox (Bukan Float).
-- [x] Tampilan Desktop: 4 Kolom.
-- [x] Tampilan Mobile: 1 Kolom Rapi (Tidak ada scroll samping).
+- :white_check_mark: Layout menggunakan CSS Grid / Flexbox (Bukan Float).
+- :white_check_mark: Tampilan Desktop: 4 Kolom.
+- :white_check_mark: Tampilan Mobile: 1 Kolom Rapi (Tidak ada scroll samping).
 
 ### TAHAP 2: Logika Pencarian (30 Poin)
 
-- [x] State pencarian berfungsi.
-- [x] Fitur Filter berjalan (Ketik "Batman" muncul film Batman).
-- [x] Jika search dihapus, daftar film kembali normal.
+- :white_check_mark: State pencarian berfungsi.
+- :white_check_mark: Fitur Filter berjalan (Ketik "Batman" muncul film Batman).
+- :white_check_mark: Jika search dihapus, daftar film kembali normal.
 
 ### TAHAP 3: Integrasi API (40 Poin)
 
-- [x] Fetch data dari API `api.sampleapis.com`.
-- [x] Loading Indicator muncul saat refresh.
-- [x] Gambar, Judul, dan Tahun tampil sesuai data API.
+- :white_check_mark: Fetch data dari API `api.sampleapis.com`.
+- :white_check_mark: Loading Indicator muncul saat refresh.
+- :white_check_mark: Gambar, Judul, dan Tahun tampil sesuai data API.
 
 ---
 
