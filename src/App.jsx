@@ -1,56 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-// --- DATA PALSU (HARDCODED) - TAHAP 3 HARUS HAPUS INI ---
-const dummyMovies = [
-  {
-    id: 1,
-    title: "Spiderman: No Way Home",
-    year: 2021,
-    poster: "https://placehold.co/300x450?text=Spiderman",
-  },
-  {
-    id: 2,
-    title: "The Batman",
-    year: 2022,
-    poster: "https://placehold.co/300x450?text=The+Batman",
-  },
-  {
-    id: 3,
-    title: "Avengers: Endgame",
-    year: 2019,
-    poster: "https://placehold.co/300x450?text=Avengers",
-  },
-  {
-    id: 4,
-    title: "Joker",
-    year: 2019,
-    poster: "https://placehold.co/300x450?text=Joker",
-  },
-  {
-    id: 5,
-    title: "Iron Man",
-    year: 2008,
-    poster: "https://placehold.co/300x450?text=Iron+Man",
-  },
-  {
-    id: 6,
-    title: "Doctor Strange",
-    year: 2016,
-    poster: "https://placehold.co/300x450?text=Dr+Strange",
-  },
-  {
-    id: 7,
-    title: "Wonder Woman",
-    year: 2017,
-    poster: "https://placehold.co/300x450?text=Wonder+Woman",
-  },
-  {
-    id: 8,
-    title: "Black Panther",
-    year: 2018,
-    poster: "https://placehold.co/300x450?text=Black+Panther",
-  },
-];
+
 function App() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
