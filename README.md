@@ -7,7 +7,7 @@
 ## Link Live Demo
 
 Klik link di bawah ini untuk melihat hasil pekerjaan saya:
-**[text](https://uas-frontend-1003250023-hanri.vercel.app/)**
+**[https://uas-frontend-1003250023-hanri.vercel.app/](https://uas-frontend-1003250023-hanri.vercel.app/)**
 
 ---
 
@@ -35,7 +35,10 @@ Klik link di bawah ini untuk melihat hasil pekerjaan saya:
 
 ## Screenshot Bukti
 
-**1. Tampilan Mobile (Responsive)**
-<img src="/screenshoots/Mobile.png" width="500">
-**2. Hasil Pencarian**
+## **1. Tampilan Mobile (Responsive)**
+
+## <img src="/screenshoots/Mobile.png" width="500">
+
+## **2. Hasil Pencarian**
+
 <img src="/screenshoots/Search.png" width="500">
