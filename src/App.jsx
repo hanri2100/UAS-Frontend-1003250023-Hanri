@@ -22,7 +22,7 @@ function App() {
         setMovies(data);
       })
       .catch((error) => {
-        throw new Error("Gagal mengambil data: " + error.message);
+        console.error("Gagal mengambil data: " + error.message);
       })
       .finally(() => {
         setLoading(false);
