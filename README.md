@@ -1,8 +1,8 @@
 # UAS Pemrograman Frontend - CinemaKampus
 
-**Nama:** [Isi Nama Lengkap Anda]
-**NIM:** [Isi NIM]
-**Kelas:** [Isi Kelas]
+**Nama:** Hanrinov Kaempe
+**NIM:** 1003250023
+**Kelas:** Eksekutif - Informatika
 
 ## Link Live Demo
 
@@ -39,6 +39,6 @@ _Silakan centang [x] jika Anda sudah mengerjakan tahap tersebut._
 
 _(Upload screenshot hasil tampilan Mobile dan Desktop disini)_
 **1. Tampilan Mobile (Responsive)**
-![Mobile](link_gambar_mobile)
+![Mobile](./screenshoots/Mobile.png)
 **2. Hasil Pencarian**
-![Search](link_gambar_search)
+![Search](./screenshoots/Search.png)
