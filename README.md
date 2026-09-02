@@ -6,7 +6,7 @@
 
 ## Link Live Demo
 
-Klik link di bawah ini untuk melihat hasil pekerjaan saya:
+Klik link di bawah ini untuk melihat hasil pekerjaan saya:<br>
 **[https://uas-frontend-1003250023-hanri.vercel.app/](https://uas-frontend-1003250023-hanri.vercel.app/)**
 
 ---
