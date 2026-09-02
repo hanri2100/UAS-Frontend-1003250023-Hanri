@@ -52,7 +52,7 @@ const dummyMovies = [
   },
 ];
 function App() {
-  const [movies, setMovies] = useState(dummyMovies);
+  const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   // TODO: TAHAP 2 - Buat state untuk search input di sini
   const [searchTerm, setSearchTerm] = useState("");

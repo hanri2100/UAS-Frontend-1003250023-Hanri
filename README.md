@@ -1,16 +1,44 @@
-# React + Vite
+# UAS Pemrograman Frontend - CinemaKampus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Nama:** [Isi Nama Lengkap Anda]
+**NIM:** [Isi NIM]
+**Kelas:** [Isi Kelas]
 
-Currently, two official plugins are available:
+## Link Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Klik link di bawah ini untuk melihat hasil pekerjaan saya:
+**[Tempel Link Vercel/Netlify Anda Disini]**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Checklist Pengerjaan (Self-Assessment)
 
-## Expanding the ESLint configuration
+_Silakan centang [x] jika Anda sudah mengerjakan tahap tersebut._
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### TAHAP 1: Layout & Responsivitas (30 Poin)
+
+- [x] Layout menggunakan CSS Grid / Flexbox (Bukan Float).
+- [x] Tampilan Desktop: 4 Kolom.
+- [x] Tampilan Mobile: 1 Kolom Rapi (Tidak ada scroll samping).
+
+### TAHAP 2: Logika Pencarian (30 Poin)
+
+- [x] State pencarian berfungsi.
+- [x] Fitur Filter berjalan (Ketik "Batman" muncul film Batman).
+- [x] Jika search dihapus, daftar film kembali normal.
+
+### TAHAP 3: Integrasi API (40 Poin)
+
+- [x] Fetch data dari API `api.sampleapis.com`.
+- [x] Loading Indicator muncul saat refresh.
+- [x] Gambar, Judul, dan Tahun tampil sesuai data API.
+
+---
+
+## Screenshot Bukti
+
+_(Upload screenshot hasil tampilan Mobile dan Desktop disini)_
+**1. Tampilan Mobile (Responsive)**
+![Mobile](link_gambar_mobile)
+**2. Hasil Pencarian**
+![Search](link_gambar_search)
