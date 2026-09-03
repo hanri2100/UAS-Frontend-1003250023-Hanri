@@ -51,6 +51,7 @@ function App() {
           onChange={handleSearch}
         />
       </header>
+
       {loading && <div className="loading">Sedang memuat data...</div>}
       <div className="movie-grid">
         {filteredMovies.map((movie) => (
@@ -74,6 +75,12 @@ function App() {
           </div>
         ))}
       </div>
+
+      {filteredMovies.length === 0 ? (
+        <p>Film tidak ditemukan</p>
+      ) : (
+        filteredMovies.map((movie) => <div key={movie.id}>{movie.title}</div>)
+      )}
     </div>
   );
 }
