@@ -70,7 +70,8 @@ float: left; /* Cara kuno, ganti ini! */
 }
 
 .Lihat {
-  color: green;
+  background-color: green;
+  color: white;
 }
 
 @media (max-width: 1024px) {
