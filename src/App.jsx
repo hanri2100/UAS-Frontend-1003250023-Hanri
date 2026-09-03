@@ -75,7 +75,7 @@ function App() {
 
               <div className="movie-info">
                 <h3>{movie.title}</h3>
-                <p>{movie.year || "Tahun tidak tersedia"}</p>
+                <p>IMDb: {movie.imdbID}</p>
               </div>
             </div>
           ))}
