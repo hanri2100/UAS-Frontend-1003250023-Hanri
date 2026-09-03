@@ -53,33 +53,33 @@ function App() {
       </header>
 
       {loading && <div className="loading">Sedang memuat data...</div>}
-      <div className="movie-grid">
-        {filteredMovies.map((movie) => (
-          <div key={movie.id} className="movie-card">
-            <img
-              src={
-                movie.posterURL ||
-                "https://placehold.co/300x450?text=Poster+Tidak+Tersedia"
-              }
-              alt={movie.title}
-              onError={(e) => {
-                e.currentTarget.onerror = null;
-                e.currentTarget.src =
-                  "https://placehold.co/300x450?text=Poster+Tidak+Tersedia";
-              }}
-            />
-            <div className="movie-info">
-              <h3>{movie.title}</h3>
-              <p>{movie.year || "Tahun tidak tersedia"}</p>
-            </div>
-          </div>
-        ))}
-      </div>
 
-      {filteredMovies.length === 0 ? (
-        <p>Film tidak ditemukan</p>
+      {!loading && searchTerm.trim() !== "" && filteredMovies.length === 0 ? (
+        <p className="not-found">Film tidak ditemukan</p>
       ) : (
-        filteredMovies.map((movie) => <div key={movie.id}>{movie.title}</div>)
+        <div className="movie-grid">
+          {filteredMovies.map((movie) => (
+            <div key={movie.id} className="movie-card">
+              <img
+                src={
+                  movie.posterURL ||
+                  "https://placehold.co/300x450?text=Poster+Tidak+Tersedia"
+                }
+                alt={movie.title}
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src =
+                    "https://placehold.co/300x450?text=Poster+Tidak+Tersedia";
+                }}
+              />
+
+              <div className="movie-info">
+                <h3>{movie.title}</h3>
+                <p>{movie.year || "Tahun tidak tersedia"}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
