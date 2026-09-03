@@ -14,7 +14,7 @@ function App() {
     fetch("https://api.sampleapis.com/movies/classic")
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Gagal mengambil data film");
+          console.error("Gagal mengambil data film");
         }
         return response.json();
       })
