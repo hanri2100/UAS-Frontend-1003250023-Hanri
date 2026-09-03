@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1> 🎬 CinemaKampus</h1>
+        <h1> CinemaKampus</h1>
         <input
           type="text"
           placeholder="Cari film kesukaanmu..."
