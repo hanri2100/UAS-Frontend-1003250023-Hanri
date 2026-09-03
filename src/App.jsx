@@ -76,6 +76,7 @@ function App() {
               <div className="movie-info">
                 <h3>{movie.title}</h3>
                 <p>IMDb: {movie.imdbID}</p>
+                <button className="Lihat">Lihat</button>
               </div>
             </div>
           ))}
